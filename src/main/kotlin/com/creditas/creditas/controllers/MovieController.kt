@@ -8,9 +8,13 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class MovieController {
 
-    @GetMapping("/movies")
-    fun getAllMovies(
-            @RequestParam(value = "name", defaultValue = "All") name: String) =
+    @GetMapping( "/movies")
+    fun getAllmovies() =
+
+            Movie(1,"SoyLeyenda","Albert",true,40.00F)
+
+    @GetMapping("/movie")
+    fun getMovieById( @RequestParam(value = "id", defaultValue = "0") id: Int) =
 
         Movie(1,"SoyLeyenda","Albert",true,40.00F)
 
