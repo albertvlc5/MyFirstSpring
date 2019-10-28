@@ -31,10 +31,9 @@ class MovieController {
 
     //Mas comun y mas profesional
     //localhost:8080/movie/1/Transporter
-    @GetMapping("/movie/{id}/{titulo}/{titulo}")
-    fun getMovieById( @PathVariable id : Int ,
-                      @PathVariable titulo : String) : List<Movie> =
-            Peliculas.filter{it.id == id}.filter{it.titulo == titulo}
+    @GetMapping("/movie/{id}")
+    fun getMovieById( @PathVariable id : Int ): List<Movie> =
+            Peliculas.filter{it.id == id}
 }
 
 
@@ -43,4 +42,3 @@ class MovieController {
 
 
 
-}
